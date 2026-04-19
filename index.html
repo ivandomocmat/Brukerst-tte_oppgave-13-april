@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>To-Do App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <h1>Min To-Do Liste</h1>
 
-    <header>
-        <h1>To-Do App</h1>
-    </header>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Legg til oppgave..." />
+      <button onclick="addTask()">Legg til</button>
+    </div>
 
-    <main>
-        <section>
-            <h2>Add Task</h2>
-            <!-- Prevent page reload and call addTask() -->
-            <form onsubmit="event.preventDefault(); postNote();">
-                <label for="taskInput">New Task:</label>
-                <input type="text" id="taskInput" placeholder="Enter a task">
-                <button type="submit">Add</button>
-            </form>
-        </section>
+    <ul id="taskList"></ul>
+  </div>
 
-        <section>
-            <h2>Your Tasks</h2>
-            <!-- Give the ul the correct id for JS -->
-            <ul id="taskList"></ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 To-Do App</p>
-    </footer>
-
-  
-<script src="list.js"></script>
+  <script src="list.js"></script>
 </body>
 </html>
